@@ -130,7 +130,7 @@ main{
 
 @media (max-width:375px){
   .card{
-    width: min(22rem, 90%);
+    width: 90vw;
   }
   .card .links a{
     padding: 10px 0;
