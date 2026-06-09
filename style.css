@@ -11,16 +11,23 @@ body {
 
 }
 
+:root {
+  --color-dark-grey: hsl(0, 0%, 8%);
+  --color-grey: hsl(0, 0%, 12%);
+  --color-neon-green: hsl(75, 94%, 57%);
+}
+
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: hsl(0, 0%, 8%);
+  background-color: var(--color-dark-grey);
   color: white;
   font-family: "Inter", sans-serif;
 }
-main{
+
+main {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,9 +38,9 @@ main{
   display: flex;
   flex-direction: column;
   width: 20rem;
-  padding: 30px;
+  padding: 2rem;
   border-radius: 10px;
-  background-color: hsl(0, 0%, 12%);
+  background-color: var(--color-grey);
   gap: 18px;
 }
 
@@ -53,20 +60,20 @@ main{
 }
 
 .card .profile .name {
-  font-size: 18px;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 
 .card .profile .location {
-  color: hsl(75, 94%, 57%);
-  font-size: 10px;
+  color: var(--color-neon-green);
+  font-size: 0.7rem;
   font-weight: 600;
   margin-bottom: 10px;
 }
 
 .card .profile .bio {
-  font-size: 10px;
-  
+  font-size: 0.7rem;
+
 }
 
 
@@ -80,6 +87,7 @@ main{
   align-items: center;
   gap: 12px;
 }
+
 .card .links li {
   width: 100%;
 }
@@ -88,7 +96,7 @@ main{
   display: block;
   width: 100%;
   text-align: center;
-  font-size: 10px;
+  font-size: 0.7rem;
   font-weight: 700;
   background: transparent;
   background-color: hsl(0, 0%, 20%);
@@ -97,48 +105,40 @@ main{
   outline: none;
   border-radius: 5px;
   padding: 12px 0;
-  transition:
-  background-color 0.3s ease,
-  color 0.3s ease,
-  transform 0.15s ease;
+  transition: none;
   text-decoration: none;
 
 }
 
 .card .links a:hover {
   cursor: pointer;
-  background-color: hsl(75, 94%, 57%);
+  background-color: var(--color-neon-green);
   color: hsl(0, 0%, 20%);
-  /* transform: scale(1.05); */
 }
-.card .links a:active{
+
+.card .links a:active {
   transform: scale(0.98);
 }
 
-/* .card .links a:focus {
-  cursor: pointer;
-  background-color: hsl(75, 94%, 57%);
-  color: hsl(0, 0%, 20%);
-} */
-.card .links a:focus-visible{
-  outline: 2px solid hsl(75, 94%, 57%);
+.card .links a:focus-visible {
+  outline: 2px solid --color-neon-green;
   outline-offset: 2px;
 
-  background-color: hsl(75, 94%, 57%);
+  background-color: var(--color-neon-green);
   color: hsl(0, 0%, 20%);
 }
 
-@media (max-width:375px){
-  .card{
+@media (max-width: 23.4375em) {
+  .card {
     width: 90vw;
   }
-  .card .links a{
+
+  .card .links a {
     padding: 10px 0;
-  }
-  .card .links a{
     min-width: 100%;
   }
-  .card .profile .name{
-    font-size: 16px;
+
+  .card .profile .name {
+    font-size: 1rem;
   }
 }
