@@ -14,6 +14,7 @@ body {
 :root {
   --color-dark-grey: hsl(0, 0%, 8%);
   --color-grey: hsl(0, 0%, 12%);
+  --color-light-grey: hsl(0, 0%, 20%);
   --color-neon-green: hsl(75, 94%, 57%);
 }
 
@@ -37,7 +38,7 @@ main {
 .card {
   display: flex;
   flex-direction: column;
-  width: 90vw;             /* Default mobile sizing */
+  width: 90vw;
   max-width: 24rem;
   padding: 2rem;
   border-radius: 10px;
@@ -50,7 +51,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 6px;
+  gap: 0.3rem;
   text-align: center;
 }
 
@@ -81,7 +82,7 @@ main {
 
 .card .links {
   list-style: none;
-  padding: 0;
+  padding: 0.2rem 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -100,7 +101,7 @@ li .link-btn {
   font-size: 0.7rem;
   font-weight: 700;
   background: transparent;
-  background-color: hsl(0, 0%, 20%);
+  background-color: var(--color-light-grey);
   color: white;
   border: none;
   outline: none;
@@ -146,9 +147,9 @@ li .link-btn {
 
 @media (prefers-reduced-motion: reduce) {
   * {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+    scroll-behavior: auto;
   }
 }
