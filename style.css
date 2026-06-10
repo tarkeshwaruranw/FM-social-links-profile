@@ -87,7 +87,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 0.75rem;
 }
 
 .links li {
@@ -115,7 +115,7 @@ li .link-btn {
 .links .link-btn:hover {
   cursor: pointer;
   background-color: var(--color-neon-green);
-  color: hsl(0, 0%, 20%);
+  color: var(--color-light-grey);
 }
 
 .links .link-btn:active {
