@@ -40,7 +40,7 @@ main {
   flex-direction: column;
   width: 90vw;
   max-width: 24rem;
-  padding: 2rem;
+  padding: clamp(1rem, 5vw, 2.5rem);
   border-radius: 10px;
   background-color: var(--color-grey);
   gap: 1.125rem;
@@ -106,7 +106,7 @@ li .link-btn {
   border: none;
   outline: none;
   border-radius: 5px;
-  padding: 12px 0;
+  padding: 0.75rem 0;
   transition: background-color 0.2s ease, color 0.2s ease;
   text-decoration: none;
 
@@ -127,7 +127,7 @@ li .link-btn {
   outline-offset: 2px;
 
   background-color: var(--color-neon-green);
-  color: hsl(0, 0%, 20%);
+  color: var(--color-light-grey);
 }
 
 @media (min-width: 24em) {
@@ -135,8 +135,8 @@ li .link-btn {
     width: 20rem;
   }
 
-  .links a {
-    padding: 10px 0;
+  .links .link-btn {
+    padding: 0.625rem 0;
     min-width: 100%;
   }
 
