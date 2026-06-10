@@ -37,11 +37,12 @@ main {
 .card {
   display: flex;
   flex-direction: column;
-  width: 20rem;
+  width: 90vw;             /* Default mobile sizing */
+  max-width: 24rem;
   padding: 2rem;
   border-radius: 10px;
   background-color: var(--color-grey);
-  gap: 18px;
+  gap: 1.125rem;
 }
 
 .card .profile {
@@ -53,25 +54,25 @@ main {
   text-align: center;
 }
 
-.card .profile .avatar {
+.profile .avatar {
   width: 3.5rem;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-block-end: 0.625rem;
 }
 
-.card .profile .name {
-  font-size: 1.2rem;
+.profile .name {
+  font-size: 1.1rem;
   font-weight: 600;
 }
 
-.card .profile .location {
+.profile .location {
   color: var(--color-neon-green);
   font-size: 0.7rem;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-block-end: 0.625rem;
 }
 
-.card .profile .bio {
+.profile .bio {
   font-size: 0.7rem;
 
 }
@@ -88,11 +89,11 @@ main {
   gap: 12px;
 }
 
-.card .links li {
+.links li {
   width: 100%;
 }
 
-.card .links li a {
+li .link-btn {
   display: block;
   width: 100%;
   text-align: center;
@@ -105,40 +106,49 @@ main {
   outline: none;
   border-radius: 5px;
   padding: 12px 0;
-  transition: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
   text-decoration: none;
 
 }
 
-.card .links a:hover {
+.links .link-btn:hover {
   cursor: pointer;
   background-color: var(--color-neon-green);
   color: hsl(0, 0%, 20%);
 }
 
-.card .links a:active {
+.links .link-btn:active {
   transform: scale(0.98);
 }
 
-.card .links a:focus-visible {
-  outline: 2px solid --color-neon-green;
+.links .link-btn:focus-visible {
+  outline: 2px solid var(--color-neon-green);
   outline-offset: 2px;
 
   background-color: var(--color-neon-green);
   color: hsl(0, 0%, 20%);
 }
 
-@media (max-width: 23.4375em) {
+@media (min-width: 24em) {
   .card {
-    width: 90vw;
+    width: 20rem;
   }
 
-  .card .links a {
+  .links a {
     padding: 10px 0;
     min-width: 100%;
   }
 
-  .card .profile .name {
-    font-size: 1rem;
+  .profile .name {
+    font-size: 1.2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
